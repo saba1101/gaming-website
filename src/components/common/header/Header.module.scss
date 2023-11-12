@@ -1,0 +1,42 @@
+header.contentCommonHeader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: $defaultTransition;
+    padding: 1rem 2rem;
+    z-index: 100;
+    background: rgb(198, 84, 113);
+    background: linear-gradient(90deg, rgba(198, 84, 113, 0.6558998599439776) 0%, rgba(29, 29, 40, 0.6362920168067228) 100%);
+    @include flex(space-between, center, row, initial);
+
+    .contentLeftSide {
+        .logo {
+            user-select: none;
+            cursor: pointer;
+
+            h1 {
+                font-size: 24px;
+                color: $Day01;
+                font-family: $fBold;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .contentRightSide {
+        margin-right: 150px;
+
+        ul.navigation {
+            @include flex(center, center, row, 80px);
+
+            li {
+                padding: 0 1rem;
+
+                span {
+                    color: $Day09;
+                }
+            }
+        }
+    }
+}

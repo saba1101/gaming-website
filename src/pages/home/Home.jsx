@@ -1,6 +1,9 @@
+import style from '@/pages/home/Home.module.scss'
 const Home = () => {
     return <>
-    <h1>Home</h1>
+        <section className={style.sectionHomeIntro}>
+            <h1>HOME</h1>
+        </section>
     </>
 }
 

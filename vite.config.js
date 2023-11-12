@@ -6,7 +6,7 @@ export default defineConfig({
 
   server: {
     port: 5005,
-    open: true, 
+    open: true,
   },
 
   build: {
@@ -30,9 +30,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-            @import "@/styles/_variables.scss";
-            @import "@/styles/_mixins.scss";
-            @import "@/styles/_tokens.scss";
+            @import "@/styles/styleAssets/_variables.scss";
+            @import "@/styles/styleAssets/_mixins.scss";
+            @import "@/styles/styleAssets/_tokens.scss";
+            @import "@/styles/styleAssets/_fonts.scss";
         `,
       },
     },

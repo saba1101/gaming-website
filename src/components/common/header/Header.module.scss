@@ -28,13 +28,64 @@ header.contentCommonHeader {
         margin-right: 150px;
 
         ul.navigation {
-            @include flex(center, center, row, 80px);
+            @include flex(center, center, row, 36px);
 
             li {
                 padding: 0 1rem;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: -1px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $Day-Negative120;
+                    transition: all .8s;
+                    z-index: -1;
+                    transform: translateX(-100%);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $Day-Negative120;
+                    transition: all 1s;
+                    z-index: -1;
+                    transform: translateX(100%);
+                }
+
+                &:hover {
+
+                    span {
+                        color: $Day00;
+                    }
+
+                    &::before {
+                        bottom: 0;
+                        left: 0;
+                        transform: translateX(0);
+                    }
+
+                    &::after {
+                        top: 0;
+                        right: 0;
+                        transform: translateX(0);
+                    }
+                }
+
 
                 span {
                     color: $Day09;
+                    user-select: none;
+                    transition: $defaultTransition;
                 }
             }
         }

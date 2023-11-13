@@ -4,7 +4,8 @@ header.contentCommonHeader {
     top: 0;
     left: 0;
     transition: $defaultTransition;
-    padding: 1rem 2rem;
+    padding: 1rem 6rem;
+    z-index: 100;
     z-index: 100;
     background: rgb(198, 84, 113);
     background: linear-gradient(90deg, rgba(198, 84, 113, 0.6558998599439776) 0%, rgba(29, 29, 40, 0.6362920168067228) 100%);
@@ -35,6 +36,48 @@ header.contentCommonHeader {
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
+                border-radius: 8px;
+
+                &.activeRoute {
+                    @include centerEl;
+
+                    &::before {
+                        bottom: 0;
+                        left: 0;
+                        transform: translateX(0);
+                        width: 100%;
+                        height: 100%;
+                        @include mainGradient;
+
+                    }
+                }
+
+                &.contactNavItem {
+                    border-radius: 8px;
+                    height: 36px;
+                    background: rgb(198, 84, 113);
+                    @include centerEl;
+                    @include mainGradient;
+                    background-repeat: no-repeat;
+                    background-size: 200% 100%;
+                    transition: background-size 1s, background-color 1s;
+
+                    span {
+                        color: $Day00;
+                    }
+
+                    &:hover {
+                        background-color: #2980b9;
+                        transition: background-size 0
+                    }
+
+
+                    &::before,
+                    &::after {
+                        content: none !important;
+                    }
+
+                }
 
                 &::before {
                     content: "";
@@ -44,46 +87,45 @@ header.contentCommonHeader {
                     width: 100%;
                     height: 1px;
                     background-color: $Day-Negative120;
-                    transition: all .8s;
+                    transition: all .5s;
                     z-index: -1;
                     transform: translateX(-100%);
                 }
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: -1px;
-                    right: -1px;
-                    width: 100%;
-                    height: 1px;
-                    background-color: $Day-Negative120;
-                    transition: all 1s;
-                    z-index: -1;
-                    transform: translateX(100%);
-                }
-
                 &:hover {
-
-                    span {
-                        color: $Day00;
-                    }
-
                     &::before {
+                        animation: fillNavigationItem .8s forwards;
                         bottom: 0;
                         left: 0;
                         transform: translateX(0);
                     }
 
-                    &::after {
-                        top: 0;
-                        right: 0;
-                        transform: translateX(0);
+                    @keyframes fillNavigationItem {
+                        0% {
+                            width: 0%;
+                            height: 1px;
+                        }
+
+                        50% {
+                            width: 100%;
+                            height: 1px;
+                        }
+
+                        100% {
+                            width: 100%;
+                            height: 100%;
+                            @include mainGradient;
+                        }
+                    }
+
+                    span {
+                        color: $Day00;
                     }
                 }
 
 
                 span {
-                    color: $Day09;
+                    color: $Day05;
                     user-select: none;
                     transition: $defaultTransition;
                 }

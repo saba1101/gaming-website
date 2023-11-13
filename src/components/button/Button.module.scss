@@ -1,0 +1,47 @@
+.mainButton {
+    padding: 12px 16px;
+    border-radius: 16px;
+    outline: noone;
+    background-image: linear-gradient(to right, #DC2424 0%, #4A569D 51%, #DC2424 100%);
+    box-shadow: 0 0 20px rgba(#4A569D, .5);
+    background-size: 200% auto;
+    transition: .5s background;
+    cursor: pointer;
+    border: none;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: rgba($Day00, .2);
+        z-index: -1;
+        transition: .5s;
+        border-radius: 16px;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-position: right center;
+        text-decoration: none;
+
+        &::after {
+            opacity: 1;
+        }
+
+        span {
+            color: $Day00;
+        }
+    }
+
+    span {
+        font-size: 16px;
+        font-family: $fMedium;
+        color: $Day05;
+    }
+
+}

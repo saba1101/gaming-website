@@ -1,12 +1,62 @@
-@mixin centerEl(){
+@mixin centerEl() {
     display: grid;
     place-items: center;
 }
 
-@mixin flex($justify,$align,$direction,$gap){
+@mixin flex($justify, $align, $direction, $gap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
     gap: $gap;
+}
+
+@mixin mainGradient() {
+    background-color: rgb(198, 84, 113);
+    background-image: linear-gradient(90deg, rgba(198, 84, 113, 0.6558998599439776) 0%, rgba(29, 29, 40, 0.6362920168067228) 100%);
+}
+
+@mixin routerTransition() {
+    animation: forwards 1s routeTransition;
+
+    @keyframes routeTransition {
+        from {
+            opacity: 0;
+            // transform: translateY(-100%);
+        }
+
+        to {
+            opacity: 1;
+            // transform: translateY(0);
+        }
+    }
+}
+
+
+@mixin typingAnimation() {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: orange;
+        }
+    }
 }

@@ -5,6 +5,14 @@
     font-family: $fRegular;
 }
 
-ul {
-    list-style-type: none;
+body {
+
+    ul {
+        list-style-type: none;
+    }
+
+    .routerTransition {
+        @include routerTransition()
+    }
+
 }

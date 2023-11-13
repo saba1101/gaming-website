@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { MAIN_CONTENT } from "../../../utils/Data"
+import { CONTENT_MANAGER } from "../../../utils/Data"
 import IconFire from '../../../assets/svgComponents/IconFire'
 import style from '@/pages/home/Home.module.scss'
 
@@ -7,7 +7,7 @@ const TrendingGames = () => {
     const [TrendingGames, setTrendingGames] = useState([])
 
     useEffect(() => {
-        setTrendingGames(MAIN_CONTENT.TRENDING_GAMES)
+        setTrendingGames(CONTENT_MANAGER.TRENDING_GAMES)
     }, [])
 
     return (

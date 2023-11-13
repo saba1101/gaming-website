@@ -3,7 +3,14 @@ import Tgame2 from '@/assets/images/games/crysis.png'
 import Tgame3 from '@/assets/images/games/stray.png'
 import Tgame4 from '@/assets/images/games/lol.png'
 
-export const MAIN_CONTENT = {
+import IconModeling from '@/assets/svgComponents/IconModeling'
+import IconPC from '@/assets/svgComponents/IconPC'
+import IconPS from '@/assets/svgComponents/IconPS'
+import IconVR from '@/assets/svgComponents/IconVR'
+import IconMobile from '@/assets/svgComponents/IconMobile'
+import IconVRD from '@/assets/svgComponents/IconVRD'
+
+export const CONTENT_MANAGER = {
     TRENDING_GAMES: [
         {
             Followers: 40,
@@ -37,22 +44,28 @@ export const MAIN_CONTENT = {
     SERVICES: [
         {
             Label: 'Mobile Game Development',
-            // Image:
+            Image: IconMobile
         },
         {
             Label: 'PC Game Development',
+            Image: IconPC
+
         },
         {
             Label: 'PS4 Game Development',
+            Image: IconPS
         },
         {
             Label: 'AR/VR Solutions',
+            Image: IconVR
         },
         {
             Label: 'AR/ VR design',
+            Image: IconVRD
         },
         {
             Label: '3D Modelings',
+            Image: IconModeling,
         },
     ]
 }

@@ -31,7 +31,7 @@
                     color: #E87D0E;
                     font-size: 24px;
                     line-height: 36px;
-                    @include typingAnimation;
+                    @include typingAnimation(3.5s);
                 }
 
                 h1 {
@@ -55,7 +55,31 @@
                         @include centerEl;
                         position: absolute;
                         top: -250px;
+                        animation: moveInCircle 25s linear infinite;
+
                         left: 0;
+
+                        @keyframes moveInCircle {
+                            0% {
+                                transform: translateX(0) translateY(0);
+                            }
+
+                            25% {
+                                transform: translateX(100px) translateY(0);
+                            }
+
+                            50% {
+                                transform: translateX(0) translateY(100px);
+                            }
+
+                            75% {
+                                transform: translateX(-100px) translateY(0);
+                            }
+
+                            100% {
+                                transform: translateX(0) translateY(0);
+                            }
+                        }
 
                         img {
                             max-width: 660px;
@@ -71,6 +95,210 @@
             margin-top: 176px;
         }
 
+    }
+}
 
+.sectionTrendingGames {
+    .templateTrendingGames {
+        width: 100%;
+        max-width: 70%;
+        margin: auto;
+
+        .trendingGamesTop {
+            @include flex(space-between, center, row, initial);
+
+            h1 {
+                color: $Day02;
+                font-size: 28px;
+                font-family: $fBold;
+            }
+
+            .seeAll {
+                @include centerEl;
+                padding: 12px 16px;
+                background: rgba($Day00, .4);
+                border-radius: 6px;
+                cursor: pointer;
+                transition: .2s;
+
+                &:hover {
+                    background: $Negative100;
+                }
+
+                span {
+                    font-size: 16px;
+                    color: $Day00;
+                }
+            }
+        }
+
+        .trendingGamesContent {
+            margin-top: 56px;
+
+            ul {
+                @include flex(space-between, center, row, 56px);
+
+                li {
+                    height: 296px;
+
+                    .thumb {
+                        @include centerEl;
+                        width: 286px;
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: rgba($Day20, .5);
+                            transition: .4s;
+                        }
+
+                        &::before {
+                            content: '';
+                            width: 0;
+                            height: 8px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            background: $Negative100;
+                            transform: translate(-50%, 0);
+                            transition: .4s;
+                            z-index: 5;
+                        }
+
+                        .gameDetails {
+                            height: 0;
+                            @include flex(flex-start, flex-start, column, 8px);
+                            position: absolute;
+                            top: 36px;
+                            left: 16px;
+                            transition: .5s;
+                            z-index: 5;
+                            opacity: 0;
+
+                            span {
+                                font-size: 16px;
+                                font-family: $fBold;
+                                color: $Day00;
+
+                                span {
+                                    color: $Day00;
+
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        transform: translateY(-30px);
+
+                        .thumb {
+                            .gameDetails {
+                                height: 100%;
+                                opacity: 1;
+
+                                span {
+                                    &:nth-child(1) {
+                                        @include typingAnimation(.4s);
+                                    }
+
+                                    &:nth-child(2) {
+                                        @include typingAnimation(.8s);
+                                    }
+
+                                    &:nth-child(3) {
+                                        @include typingAnimation(1.2s);
+                                    }
+                                }
+                            }
+
+                            &::after {
+                                height: 100%;
+                            }
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .followers {
+                        margin-top: 8px;
+                        @include flex(center, center, row, 8px);
+
+
+                        svg {
+                            width: 12px;
+                        }
+
+                        h2 {
+                            font-size: 18px;
+                            color: $Day00;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sectionSpotlight {
+    max-width: 90%;
+    margin: 120px auto;
+
+    .templateSpotlight {
+        width: 100%;
+        position: relative;
+        @include flex(center, unset, column, 32px);
+
+        .spotlightLabel {
+            margin: auto;
+            max-width: 456px;
+            text-align: center;
+
+            h1 {
+                font-size: 32px;
+                color: $Day00;
+            }
+        }
+
+        .subDescription {
+            max-width: 556px;
+
+            h2 {
+                font-size: 20px;
+                color: $Day00;
+            }
+
+            p {
+                font-size: 18px;
+                color: $Day06;
+            }
+        }
+
+        .spotLightImage {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 426px;
+                object-fit: cover;
+            }
+        }
     }
 }

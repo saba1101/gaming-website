@@ -29,7 +29,6 @@ const HomeIntro = () => {
                 </div>
                 <div className={style.scroller}>
                     <ScrollButton />
-
                 </div>
             </div>
         </>

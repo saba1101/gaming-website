@@ -3,7 +3,7 @@ import HomeIntro from '@/pages/home/templates/HomeIntro.jsx'
 import TrendingGames from './templates/TrendingGames'
 import SpotLight from './templates/Spotlight'
 import Services from './templates/Services'
-
+import GamingShowcase from './templates/GamingShowcase'
 const Home = () => {
     return <>
         <section className={`${style.sectionHomeIntro} routerTransition`}>
@@ -17,6 +17,9 @@ const Home = () => {
         </section>
         <section className={style.sectionServices}>
             <Services />
+        </section>
+        <section className={style.sectionGamingahowcase}>
+            <GamingShowcase />
         </section>
     </>
 }

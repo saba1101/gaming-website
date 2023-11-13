@@ -67,5 +67,5 @@ export const CONTENT_MANAGER = {
             Label: '3D Modelings',
             Image: IconModeling,
         },
-    ]
+    ],
 }

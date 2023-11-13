@@ -303,3 +303,78 @@
         }
     }
 }
+
+
+.sectionServices {
+    background: rgba($Day15, .5);
+    padding: 30px;
+
+    .templateServices {
+        max-width: 80%;
+        margin: 80px auto;
+        @include flex(center, center, column, 36px);
+
+        h1,
+        p {
+            max-width: 756px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: $Day00;
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 18px;
+            color: $Day07;
+            font-family: $fRegular;
+        }
+
+        .servicesList {
+            ul {
+                @include flex(center, center, row, 16px);
+                margin-top: 24px;
+
+                li {
+                    @include flex(center, center, row, 8px);
+
+                    .iconWrapper {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        @include centerEl;
+                        background: rgba($Negative100, .2);
+
+                        svg {
+                            width: 36px;
+                        }
+                    }
+
+                    span {
+                        font-family: $fBold;
+                        font-size: 18px;
+                        color: $Day00;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        transform: scale(1.2);
+
+                        span {
+                            color: $Negative100;
+                            ;
+                        }
+
+                        .iconWrapper svg {
+                            path {
+                                stroke: $Negative100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

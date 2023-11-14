@@ -1,0 +1,27 @@
+.customInputWrapper {
+    width: 100%;
+    height: 46px;
+
+    input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        transition: .5s;
+        border: 2px solid rgba($Day00, .2);
+        font-size: 18px;
+        color: $Day20;
+        background: rgba($Day02, .8);
+        padding: 0 16px;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgba($Day20, .5);
+
+        &::placeholder {
+            font-size: 16px;
+            color: $Day18;
+        }
+
+        &:focus {
+            border: 2px solid rgba($Positive100, .4);
+        }
+    }
+}

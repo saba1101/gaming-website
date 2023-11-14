@@ -1,0 +1,37 @@
+.templateSubscribe {
+    width: 1170px;
+    background: #1C140F;
+    border-radius: 15px;
+    @include flex(space-between, center, row, initial);
+    padding: 40px 56px;
+
+    .leftSide {
+        max-width: 456px;
+
+        h1 {
+            font-size: 32px;
+            font-family: $fBold;
+            color: $Day00;
+        }
+
+        p {
+            margin-top: 16px;
+            font-size: 18px;
+            color: $Day07;
+            line-height: 22px;
+        }
+    }
+
+    .rightSide {
+        .subscribeField {
+            position: relative;
+            width: 526px;
+            @include flex(flex-start, center, row, 8px);
+            z-index: 2;
+
+            .subscribeButton {
+                z-index: -1;
+            }
+        }
+    }
+}

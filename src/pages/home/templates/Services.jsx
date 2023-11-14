@@ -17,14 +17,12 @@ const Services = () => {
                         {
                             Services && Services.map((service, index) => {
                                 return (
-                                    <>
-                                        <li key={index} data-aos="fade-up" data-aos-delay={`${index}00`}>
-                                            <div className={style.iconWrapper}>
-                                                {<service.Image />}
-                                            </div>
-                                            <span>{service.Label}</span>
-                                        </li>
-                                    </>
+                                    <li key={index} data-aos="fade-up" data-aos-delay={`${index}00`}>
+                                        <div className={style.iconWrapper}>
+                                            {<service.Image />}
+                                        </div>
+                                        <span>{service.Label}</span>
+                                    </li>
                                 )
                             })
                         }

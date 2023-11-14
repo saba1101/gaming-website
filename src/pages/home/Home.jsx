@@ -4,6 +4,7 @@ import TrendingGames from './templates/TrendingGames'
 import SpotLight from './templates/Spotlight'
 import Services from './templates/Services'
 import GamingShowcase from './templates/GamingShowcase'
+import Subscribe from '../../components/subscribe/Subscribe'
 const Home = () => {
     return <>
         <section className={`${style.sectionHomeIntro} routerTransition`}>
@@ -20,6 +21,9 @@ const Home = () => {
         </section>
         <section className={style.sectionGamingahowcase}>
             <GamingShowcase />
+        </section>
+        <section className={style.sectionSubscribe}>
+            <Subscribe />
         </section>
     </>
 }

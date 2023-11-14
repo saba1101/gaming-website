@@ -1,7 +1,7 @@
 import style from '@/components/button/Button.module.scss'
-const Button = ({ label }) => {
+const Button = ({ label, radius }) => {
     return <>
-        <button className={style.mainButton}>
+        <button style={{ borderRadius: radius }} className={style.mainButton}>
             <span>{label || 'Label'}</span>
         </button>
     </>

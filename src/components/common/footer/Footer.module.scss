@@ -1,0 +1,67 @@
+.contentCommonFooter {
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    margin-top: 64px;
+
+    background: rgba($Day20, .8);
+
+    .footerTop {
+        @include flex(space-between, flex-end, row, 32px);
+
+        ul {
+            max-width: calc(100% / 4);
+
+            li {
+                font-size: 16px;
+                color: $Day05;
+                margin-top: 16px;
+            }
+
+            &.footerSocials {
+                @include flex(flex-start, center, row, 16px);
+
+                li {
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    @include centerEl;
+                    cursor: pointer;
+                    transition: .4s;
+                    @include mainGradient;
+
+                    svg {
+                        path {
+                            fill: $Day00;
+                        }
+                    }
+                }
+            }
+
+            &.footerMainDetails {
+                li {
+                    &:first-child {
+                        span {
+                            font-size: 32px;
+                            font-family: $fBold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBottom {
+        padding-top: 32px;
+        border-top: 1px solid rgba($Day00, .2);
+        margin-top: 32px;
+        @include centerEl;
+
+        h2 {
+            color: $Day07;
+            font-size: 14px;
+            font-family: $fBold;
+        }
+    }
+}

@@ -397,6 +397,7 @@
             font-size: 32px;
             font-family: $fBold;
             color: $Day00;
+            @include typingAnimation(2s);
         }
 
         p {

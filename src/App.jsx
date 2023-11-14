@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from '@/components/common/header/Header.jsx'
+import Footer from './components/common/footer/footer';
 import ROUTES from '@/router/Router.jsx'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -22,6 +23,7 @@ const App = () => {
             }
           </Routes>
         </main>
+        <Footer />
       </Router>
     </>
 

@@ -10,6 +10,11 @@ import IconVR from '@/assets/svgComponents/IconVR'
 import IconMobile from '@/assets/svgComponents/IconMobile'
 import IconVRD from '@/assets/svgComponents/IconVRD'
 
+import IconFB from '@/assets/svgComponents/IconFB'
+import IconTW from '@/assets/svgComponents/IconTW'
+import IconLinkdin from '@/assets/svgComponents/IconLinkdin'
+import IconInstagram from '@/assets/svgComponents/IconInstagram'
+
 export const CONTENT_MANAGER = {
     TRENDING_GAMES: [
         {
@@ -68,4 +73,18 @@ export const CONTENT_MANAGER = {
             Image: IconModeling,
         },
     ],
+    SOCIALS: [
+        {
+            Icon: IconFB
+        },
+        {
+            Icon: IconTW
+        },
+        {
+            Icon: IconLinkdin
+        },
+        {
+            Icon: IconInstagram
+        },
+    ]
 }

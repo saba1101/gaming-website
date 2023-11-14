@@ -9,7 +9,7 @@ const HomeIntro = () => {
                 <div className={style.contentWrapper}>
                     <div data-aos="fade-right" className={style.leftSide}>
                         <h5>
-                            Proved By GameTech
+                            Proved By @Blitz
                         </h5>
                         <h1>
                             Work that we produce for our clients

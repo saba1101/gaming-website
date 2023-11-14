@@ -1,0 +1,87 @@
+.sliderContainer {
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .slider {
+        position: relative;
+
+        .previous,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            border: none;
+            outline: none;
+            background: rgba($Day00, .5);
+            width: 46px;
+            height: 46px;
+            @include centerEl;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba($Day00, 1);
+
+                svg {
+                    path {
+                        fill: $Day20;
+                    }
+                }
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .next {
+            right: 16px;
+            transform: rotate(-90deg);
+        }
+
+        .previous {
+            left: 16px;
+            transform: rotate(90deg);
+        }
+
+        .slidesInfo {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            span {
+                color: $Day00;
+                font-size: 18px;
+                font-family: $fBold;
+            }
+        }
+
+        .slide {
+            width: 100%;
+            height: 550px;
+            animation: sliderIn .2s forwards linear;
+
+            @keyframes sliderIn {
+                from {
+                    transform: translateY(5%);
+                    opacity: .8;
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

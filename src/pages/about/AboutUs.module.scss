@@ -1,0 +1,35 @@
+section {
+
+    &.sectionAboutUsIntro {
+        width: 100%;
+
+        .templateAboutIntro {
+            width: 100%;
+            margin-top: 124px;
+            padding-left: 160px;
+            @include flex(space-between, flex-start, row, initial);
+
+            .leftSide {
+                max-width: 556px;
+                @include flex(flex-start, left, column, 32px);
+
+                h1 {
+                    font-size: 32px;
+                    font-family: $fBold;
+                    color: $Day00;
+                }
+
+                p {
+                    margin-top: 32px;
+                    font-size: 18px;
+                    color: $Day05;
+                    line-height: 28px;
+                }
+            }
+
+            .sliderPlaceholder {
+                width: 856px;
+            }
+        }
+    }
+}

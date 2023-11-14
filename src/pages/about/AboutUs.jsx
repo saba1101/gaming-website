@@ -1,8 +1,10 @@
+import style from '@/pages/about/AboutUs.module.scss'
+import AboutIntro from './templates/AboutIntro'
 const AboutUs = () => {
     return (
         <>
-            <section className="routerTransition">
-                <h1>About</h1>
+            <section className={`${style.sectionAboutUsIntro} routerTransition`}>
+                <AboutIntro />
             </section>
         </>
     )

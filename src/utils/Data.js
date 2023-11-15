@@ -15,6 +15,10 @@ import IconTW from '@/assets/svgComponents/IconTW'
 import IconLinkdin from '@/assets/svgComponents/IconLinkdin'
 import IconInstagram from '@/assets/svgComponents/IconInstagram'
 
+import IconPlace from '@/assets/svgComponents/IconPlace'
+import IconServer from '@/assets/svgComponents/IconServer'
+import IconProfile from '@/assets/svgComponents/IconProfile'
+
 export const CONTENT_MANAGER = {
     TRENDING_GAMES: [
         {
@@ -121,6 +125,23 @@ export const CONTENT_MANAGER = {
             Age: 50,
             Experience: '10 Years',
             Position: 'IT Support',
+        },
+    ],
+    OVERVIEW: [
+        {
+            Label: 'Clients',
+            Value: '90',
+            Icon: IconProfile,
+        },
+        {
+            Label: 'Countries',
+            Value: '20',
+            Icon: IconPlace,
+        },
+        {
+            Label: 'Projects',
+            Value: '50',
+            Icon: IconServer,
         },
     ],
 }

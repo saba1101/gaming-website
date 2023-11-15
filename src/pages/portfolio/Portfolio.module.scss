@@ -1,0 +1,135 @@
+section {
+    &.sectionOverView {
+        width: 80%;
+        @include centerEl;
+        margin-top: 120px;
+        .templateOverView {
+            h1,
+            p {
+                text-align: center;
+            }
+            h1 {
+                font-size: 32px;
+                color: $Day00;
+            }
+            p {
+                margin-top: 18px;
+                color: rgba($Day00, 0.8);
+            }
+
+            ul.overViewDetails {
+                @include flex(center, center, row, 56px);
+                background: #1c140f;
+                padding: 16px 32px;
+                border-radius: 12px;
+                margin-top: 46px;
+                li {
+                    width: 236px;
+                    padding: 32px;
+                    @include flex(flex-start, center, row, 32px);
+
+                    &:not(&:last-child) {
+                        border-right: 1px solid rgba($Day00, 0.2);
+                    }
+
+                    .labelWrapper {
+                        h2 {
+                            color: $Day00;
+                            font-size: 22px;
+                            line-height: 32px;
+                        }
+                        span {
+                            color: rgba($Day00, 0.5);
+                            font-size: 16px;
+                        }
+                    }
+
+                    &:hover {
+                    }
+                }
+            }
+        }
+    }
+
+    &.sectionLaunch {
+        max-width: 80%;
+        .templateLauch {
+            width: 100%;
+            position: relative;
+            @include flex(center, center, row, 120px);
+            video {
+                border-radius: 20px;
+            }
+            .launchDetails {
+                @include flex(flex-start, left, column, 36px);
+                h1 {
+                    font-size: 26px;
+                    color: $Day00;
+                }
+                p {
+                    color: rgba($Day00, 0.8);
+                    font-size: 18px;
+                }
+                ul {
+                    @include flex(flex-start, left, column, 16px);
+                    li {
+                        @include flex(flex-start, center, row, 16px);
+                    }
+
+                    span {
+                        color: $Day00;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sectionContentShowcase {
+        width: 80%;
+        @include centerEl;
+
+        .templateContentShowcase {
+            @include flex(center, flex-start, row, 186px);
+            margin-top: 156px;
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+
+            .details {
+                max-width: 556px;
+                h1,
+                p {
+                    color: $Day00;
+                }
+                h1 {
+                    font-size: 32px;
+                    font-family: $fBold;
+                }
+                p {
+                    font-size: 18px;
+                    font-family: $fLight;
+                    margin-top: 26px;
+
+                    &:last-child {
+                        font-size: 16px;
+                    }
+                }
+                .readMore {
+                    margin-top: 56px;
+                }
+            }
+
+            .imageContent {
+                @include centerEl;
+
+                img {
+                    width: 720px;
+                    height: 720px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

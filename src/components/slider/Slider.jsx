@@ -21,10 +21,6 @@ const Slider = ({ images, autoPlay }) => {
         }, AutoPlayInterval)
     }
 
-    // useEffect(() => {
-    //     if (autoPlay) DeployAutoPlay()
-    // }, [autoPlay])
-
     return (
         <div className={style.sliderContainer}>
             <div className={style.slider}>

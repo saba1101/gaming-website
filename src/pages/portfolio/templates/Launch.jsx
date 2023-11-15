@@ -10,6 +10,7 @@ const Launch = () => {
                 <video
                     controls
                     autoPlay
+                    muted
                     width={720}
                 >
                     <source src={Vmp4} />

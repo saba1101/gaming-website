@@ -144,4 +144,26 @@ export const CONTENT_MANAGER = {
             Icon: IconServer,
         },
     ],
+    REVIEWS: [
+        {
+            Authors: 'EpicGamer99',
+            Comment: 'The gameplay mechanics are so smooth and satisfying. A definite must-play!',
+            Stars: 5,
+        },
+        {
+            Authors: 'ShadowNinja23',
+            Comment: 'Graphics are good, but the story lacks depth. Expected more twists.',
+            Stars: 3,
+        },
+        {
+            Authors: 'VRgamer34',
+            Comment: "The immersive experience in VR blew my mind! It's like being in another world.",
+            Stars: 5,
+        },
+        {
+            Authors: 'StrategyMaster',
+            Comment: 'Tactical gameplay at its finest. Each decision feels crucial and impactful.',
+            Stars: 4,
+        },
+    ],
 }

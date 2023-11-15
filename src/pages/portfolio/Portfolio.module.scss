@@ -132,4 +132,84 @@ section {
             }
         }
     }
+
+    &.sectionCustomers {
+        width: 100%;
+        padding: 80px;
+        background: #1c140f;
+
+        .templateCustomers {
+            h1,
+            p {
+                color: $Day00;
+                text-align: center;
+            }
+            h1 {
+                font-size: 36px;
+                margin-top: 26px;
+            }
+            p {
+                margin-top: 26px;
+                font-size: 18px;
+            }
+
+            ul {
+                @include flex(space-between, center, row, 68px);
+                margin-top: 60px;
+
+                li {
+                    width: 400px;
+                    height: 230px;
+                    border-radius: 10px;
+                    @include flex(flex-start, left, column, 28px);
+                    padding: 16px 18px;
+                    background: #0f0901;
+                    border: 2px solid #dc7000;
+
+                    .reviewTop {
+                        @include flex(space-between, center, row, inital);
+
+                        .reviewerdDetails {
+                            @include flex(flex-start, center, row, 8px);
+                            .avatar {
+                                width: 60px;
+                                height: 60px;
+                                @include centerEl;
+                                @include mainGradient;
+                                border-radius: 50%;
+                                transition: 0.5s;
+
+                                span {
+                                    font-size: 32px;
+                                    color: $Day00;
+                                    font-family: $fBold;
+                                }
+                            }
+                            span {
+                                color: $Day00;
+                                font-size: 18px;
+                            }
+                        }
+                        .rated {
+                            @include flex(center, center, row, 6px);
+                            span {
+                                color: $Day00;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .reviewBottom {
+                        p {
+                            text-align: left;
+                            margin-top: 0;
+                            font-size: 18px;
+                            color: rgba($Day00, 0.8);
+                            line-height: 26px;
+                            font-family: $fLight;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

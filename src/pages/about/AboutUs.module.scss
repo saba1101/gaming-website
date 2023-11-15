@@ -116,4 +116,134 @@ section {
             }
         }
     }
+
+    &.sectionContentDisplay {
+        width: 100%;
+        background: #1c140f;
+        padding: 56px;
+        .templateContentDisplay {
+            max-width: 80%;
+            @include flex(space-between, flex-start, row, initial);
+
+            .imageWrapper {
+                position: relative;
+                transition: 0.5s;
+                img {
+                    width: 756px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    transition: 0.5s;
+                }
+
+                &:hover {
+                    transform: scale(1.2) translate(50%, 0);
+                    ~ .contentDetails {
+                        opacity: 0 !important;
+                    }
+                }
+            }
+            .contentDetails {
+                // max-width: 756px;
+                margin-left: 120px;
+                transition: 0.5s;
+                h3 {
+                    color: rgba($Day00, 0.7);
+                    font-size: 18px;
+                    font-family: $fMedium;
+                }
+                h1 {
+                    margin-top: 16px;
+                    font-size: 32px;
+                    color: $Day00;
+                    font-family: $fBold;
+                }
+                p {
+                    margin-top: 32px;
+                    font-size: 18px;
+                    color: rgba($Day00, 0.6);
+                    font-family: $fLight;
+                }
+            }
+        }
+    }
+
+    &.sectionOurTeam {
+        width: 100%;
+        .templateOurTeam {
+            padding: 60px;
+            width: 100%;
+            @include centerEl;
+            h1 {
+                color: $Day00;
+                font-size: 32px;
+                font-family: $fBold;
+            }
+
+            ul {
+                margin-top: 32px;
+                @include flex(center, center, row, 32px);
+                flex-wrap: wrap;
+                cursor: default;
+
+                &:hover {
+                    li {
+                        opacity: 0.4;
+                    }
+                }
+
+                li {
+                    width: 256px;
+                    height: 256px;
+                    @include flex(center, center, column, 16px);
+                    background: #1c140f;
+                    border-radius: 16px;
+                    position: relative;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    .avatar {
+                        width: 120px;
+                        height: 120px;
+                        @include centerEl;
+                        @include mainGradient;
+                        border-radius: 50%;
+                        transition: 0.5s;
+
+                        span {
+                            font-size: 32px;
+                            color: $Day00;
+                            font-family: $fBold;
+                        }
+                    }
+
+                    .visibleDetails {
+                        @include flex(center, center, column, 8px);
+                        span {
+                            &:first-child {
+                                color: $Day00;
+                            }
+
+                            color: rgba($Day00, 0.8);
+                            font-size: 18px;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 50px;
+                        height: 70px;
+                        @include mainGradient;
+                        top: -25px;
+                        right: -25px;
+                        border-radius: 20px;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }

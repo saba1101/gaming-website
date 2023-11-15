@@ -44,29 +44,28 @@ export const CONTENT_MANAGER = {
             Publisher: 'Riot Games',
             Label: 'League of Legends',
             Year: 2009,
-        }
+        },
     ],
     SERVICES: [
         {
             Label: 'Mobile Game Development',
-            Image: IconMobile
+            Image: IconMobile,
         },
         {
             Label: 'PC Game Development',
-            Image: IconPC
-
+            Image: IconPC,
         },
         {
             Label: 'PS4 Game Development',
-            Image: IconPS
+            Image: IconPS,
         },
         {
             Label: 'AR/VR Solutions',
-            Image: IconVR
+            Image: IconVR,
         },
         {
             Label: 'AR/ VR design',
-            Image: IconVRD
+            Image: IconVRD,
         },
         {
             Label: '3D Modelings',
@@ -75,16 +74,53 @@ export const CONTENT_MANAGER = {
     ],
     SOCIALS: [
         {
-            Icon: IconFB
+            Icon: IconFB,
         },
         {
-            Icon: IconTW
+            Icon: IconTW,
         },
         {
-            Icon: IconLinkdin
+            Icon: IconLinkdin,
         },
         {
-            Icon: IconInstagram
+            Icon: IconInstagram,
         },
-    ]
+    ],
+    TEAM_MEMBERS: [
+        {
+            Label: { Firstname: 'Alice', Lastname: 'Smith' },
+            Address: 'New York',
+            Age: 28,
+            Experience: '8 Years',
+            Position: 'Software Engineer',
+        },
+        {
+            Label: { Firstname: 'Bob', Lastname: 'Johnson' },
+            Address: 'Los Angeles',
+            Age: 35,
+            Experience: '12 Years',
+            Position: 'Data Analyst',
+        },
+        {
+            Label: { Firstname: 'Charlie', Lastname: 'Williams' },
+            Address: 'Chicago',
+            Age: 42,
+            Experience: '5 Years',
+            Position: 'Network Administrator',
+        },
+        {
+            Label: { Firstname: 'Diana', Lastname: 'Brown' },
+            Address: 'Houston',
+            Age: 45,
+            Experience: '18 Years',
+            Position: 'UX Designer',
+        },
+        {
+            Label: { Firstname: 'Eva', Lastname: 'Jones' },
+            Address: 'Phoenix',
+            Age: 50,
+            Experience: '10 Years',
+            Position: 'IT Support',
+        },
+    ],
 }

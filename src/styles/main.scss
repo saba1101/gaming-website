@@ -10,19 +10,31 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #F16A6A;
+    background-color: #f16a6a;
     background-blend-mode: multiply;
+    animation: float 30s ease-in-out infinite;
+
+    @keyframes float {
+        0% {
+            background-position-y: -20px;
+        }
+        50% {
+            background-position-y: -130px;
+        }
+        100% {
+            background-position-y: 0px;
+        }
+    }
 
     ul {
         list-style-type: none;
     }
 
     .routerTransition {
-        @include routerTransition()
+        @include routerTransition();
     }
 
     section {
         margin: 76px auto;
     }
-
 }

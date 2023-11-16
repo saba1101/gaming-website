@@ -1,8 +1,8 @@
 import style from '@/pages/about/AboutUs.module.scss'
-import AboutIntro from './templates/AboutIntro'
-import WorkWithUs from './templates/WorkWithUs'
-import ContentDisplay from './templates/ContentDisplay'
-import OurTeam from './templates/OurTeam'
+import AboutIntro from '@/page/about/templates/AboutIntro'
+import WorkWithUs from '@/page/about/templates/WorkWithUs'
+import ContentDisplay from '@/page/about/templates/ContentDisplay'
+import OurTeam from '@/page/about/templates/OurTeam'
 const AboutUs = () => {
     return (
         <>

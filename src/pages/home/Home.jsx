@@ -1,9 +1,9 @@
 import style from '@/pages/home/Home.module.scss'
 import HomeIntro from '@/pages/home/templates/HomeIntro.jsx'
-import TrendingGames from './templates/TrendingGames'
-import SpotLight from './templates/Spotlight'
-import Services from './templates/Services'
-import GamingShowcase from './templates/GamingShowcase'
+import TrendingGames from '@/pages/home/templates/TrendingGames'
+import SpotLight from '@/pages/home/templates/Spotlight'
+import Services from '@/pages/home/templates/Services'
+import GamingShowcase from '@/pages/home/templates/GamingShowcase'
 import Subscribe from '@/components/subscribe/Subscribe'
 const Home = () => {
     return (

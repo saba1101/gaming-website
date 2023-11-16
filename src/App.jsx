@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from '@/components/common/header/Header.jsx'
-import Footer from '@/components/common/footer/footer.jsx'
+import Footer from '@/components/common/footer/Footer.jsx'
 import ROUTES from '@/router/Router.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'

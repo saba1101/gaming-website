@@ -1,41 +1,47 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { minify } from 'terser'
 export default defineConfig({
-  plugins: [react()],
+    plugins: [react()],
 
-  server: {
-    port: 5005,
-    open: true,
-  },
-
-  build: {
-    outDir: 'dist',
-    minify: 'terser',
-    sourcemap: true,
-  },
-
-  resolve: {
-    alias: {
-      '@': '/src',
+    server: {
+        port: 5005,
+        open: true,
     },
-  },
 
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
-  },
+    build: {
+        outDir: 'dist',
+        minify: 'terser',
+        sourcemap: true,
+        cssCodeSplit: true,
+        terserOptions: {
+            compress: {
+                drop_console: true,
+            },
+            minify,
+        },
+    },
+    resolve: {
+        alias: {
+            '@': '/src',
+        },
+    },
 
-  css: {
-    modules: true,
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
+    optimizeDeps: {
+        include: ['react', 'react-dom'],
+    },
+
+    css: {
+        modules: true,
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
             @import "@/styles/styleAssets/_variables.scss";
             @import "@/styles/styleAssets/_mixins.scss";
             @import "@/styles/styleAssets/_tokens.scss";
             @import "@/styles/styleAssets/_fonts.scss";
         `,
-      },
+            },
+        },
     },
-  },
-});
+})

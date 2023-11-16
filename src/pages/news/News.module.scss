@@ -1,0 +1,181 @@
+section {
+    &.sectionNewsIntro {
+        width: 100%;
+        margin-top: 180px;
+        @include flex(center, center, column, 32px);
+        h1,
+        p {
+            color: $Day00;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+            font-family: $fLight;
+        }
+
+        .newsContent {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 820px 620px;
+            gap: 120px;
+            padding: 0 60px;
+            margin-top: 120px;
+            .mainArticles {
+                overflow: hidden;
+                ul {
+                    @include flex(left, left, column, 64px);
+                    li {
+                        .articleImage {
+                            img {
+                                width: 920px;
+                                object-fit: cover;
+                                height: 480px;
+                                border-radius: 20px;
+                            }
+                        }
+
+                        .articleDetails {
+                            .authorDetails {
+                                border-bottom: 2px solid rgba($Day00, 0.3);
+                                @include flex(space-between, center, row, initial);
+                                padding: 12px 0;
+                                span {
+                                    color: rgba($Day00, 0.7);
+                                    &:first-child {
+                                        font-family: $fLight;
+                                    }
+                                }
+                            }
+
+                            h1 {
+                                font-size: 32px;
+                                color: $Day00;
+                                padding-top: 16px;
+                            }
+                            p {
+                                margin-top: 32px;
+                                color: rgba($Day00, 0.7);
+                                line-height: 32px;
+                            }
+                            .readMore {
+                                margin-top: 32px;
+                                padding: 12px 16px;
+                                background: #1c140f;
+                                border-radius: 6px;
+                                max-width: 220px;
+                                position: relative;
+                                overflow: hidden;
+                                cursor: pointer;
+                                span {
+                                    color: $Day00;
+                                    transition: 0.3s;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 1;
+                                    opacity: 0;
+                                    transition: all 0.3s;
+                                    border-top-width: 1px;
+                                    border-bottom-width: 1px;
+                                    border-top-style: solid;
+                                    border-bottom-style: solid;
+                                    border-top-color: rgba(255, 255, 255, 0.5);
+                                    border-bottom-color: rgba(255, 255, 255, 0.5);
+                                    transform: scale(0.1, 1);
+                                }
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 1;
+                                    transition: all 0.3s;
+                                    background-color: rgba(255, 255, 255, 0.1);
+                                }
+
+                                &:hover {
+                                    span {
+                                        letter-spacing: 2px;
+                                    }
+                                    &::before {
+                                        opacity: 1;
+                                        transform: scale(1, 1);
+                                    }
+                                    &::after {
+                                        opacity: 0;
+                                        transform: scale(0.1, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sideArticles {
+                ul {
+                    @include flex(flex-start, center, column, 32px);
+                    li {
+                        border: 2px solid transparent;
+                        padding: 16px;
+                        background: #1c140f;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        @include flex(flex-start, flex-start, row, 32px);
+                        cursor: pointer;
+                        .imageWrapper {
+                            img {
+                                width: 320px;
+                                height: 240px;
+                                object-fit: cover;
+                                opacity: 0.8;
+                                transition: 0.3s;
+                            }
+                        }
+                        .detailsWrapper {
+                            .authorDetails {
+                                transition: 0.3s;
+                                background: rgba(#ff7c32, 0.6);
+                                padding: 6px 8px;
+                                border-radius: 6px;
+                                h1 {
+                                    color: $Day20;
+                                    font-size: 22px;
+                                }
+                            }
+
+                            .articleContent {
+                                margin-top: 18px;
+                                p {
+                                    font-size: 18px;
+                                    font-family: $fLight;
+                                    line-height: 26px;
+                                    color: $Day00;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            border: 2px solid #ff7c32;
+                            .imageWrapper > img {
+                                opacity: 1;
+                            }
+                            .authorDetails {
+                                background: #ff7c32;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

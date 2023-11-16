@@ -1,0 +1,28 @@
+.searchField {
+    width: 456px;
+    height: 49px;
+    position: relative;
+    background: #1c140f;
+    box-shadow: 0 0 5px #1c140f;
+    @include centerEl;
+    overflow: hidden;
+    border-radius: 8px;
+    input {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding: 0 46px;
+        background: transparent;
+        font-size: 18px;
+        color: $Day00;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translate(0, -50%);
+        @include centerEl;
+    }
+}

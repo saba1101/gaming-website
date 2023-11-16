@@ -1,6 +1,6 @@
 import style from '@/pages/portfolio/Portfolio.module.scss'
 import { useEffect, useState } from 'react'
-import { CONTENT_MANAGER } from '../../../utils/Data'
+import { CONTENT_MANAGER } from '@/utils/Data'
 
 const OverView = () => {
     const [Details, setDetails] = useState([])

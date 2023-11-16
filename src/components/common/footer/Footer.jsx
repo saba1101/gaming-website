@@ -1,5 +1,5 @@
 import style from '@/components/common/footer/Footer.module.scss'
-import { CONTENT_MANAGER } from '../../../utils/Data'
+import { CONTENT_MANAGER } from '@/utils/Data'
 import { useState } from 'react'
 const Footer = () => {
     const [Socials, setSocials] = useState([])
@@ -9,7 +9,10 @@ const Footer = () => {
     }, [])
     return (
         <>
-            <footer className={style.contentCommonFooter} data-aos="fade-up">
+            <footer
+                className={style.contentCommonFooter}
+                data-aos="fade-up"
+            >
                 <div className={style.footerTop}>
                     <ul className={style.footerMainDetails}>
                         <li>
@@ -48,13 +51,9 @@ const Footer = () => {
                         </li>
                     </ul>
                     <ul className={style.footerSocials}>
-                        {
-                            Socials.map((social, index) => {
-                                return <li key={index}>
-                                    {<social.Icon />}
-                                </li>
-                            })
-                        }
+                        {Socials.map((social, index) => {
+                            return <li key={index}>{<social.Icon />}</li>
+                        })}
                     </ul>
                 </div>
                 <div className={style.footerBottom}>

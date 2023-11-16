@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Search from '../../components/search/Search'
+import Search from '@/components/search/Search'
 import style from '@/pages/news/News.module.scss'
-import { CONTENT_MANAGER } from '../../utils/Data'
+import { CONTENT_MANAGER } from '@/utils/Data'
 import EmptyArticleImage from '@/assets/images/news.jpg'
 
 const News = () => {

@@ -1,6 +1,6 @@
 import style from '@/pages/about/AboutUs.module.scss'
 import { useEffect, useState } from 'react'
-import { CONTENT_MANAGER } from '../../../utils/Data'
+import { CONTENT_MANAGER } from '@/utils/Data'
 
 const OurTeam = () => {
     const [Team, setTeam] = useState([])

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-import { CONTENT_MANAGER } from "../../../utils/Data"
-import IconFire from '../../../assets/svgComponents/IconFire'
+import { useEffect, useState } from 'react'
+import { CONTENT_MANAGER } from '@/utils/Data'
+import IconFire from '@/assets/svgComponents/IconFire'
 import style from '@/pages/home/Home.module.scss'
 
 const TrendingGames = () => {
@@ -16,23 +16,34 @@ const TrendingGames = () => {
                 <div className={style.trendingGamesTop}>
                     <h1>Currently Trending Games</h1>
                     <div className={style.seeAll}>
-                        <span>
-                            See All
-                        </span>
+                        <span>See All</span>
                     </div>
                 </div>
                 <div className={style.trendingGamesContent}>
                     <ul>
-                        {
-                            TrendingGames && TrendingGames.map((game, index) => {
+                        {TrendingGames &&
+                            TrendingGames.map((game, index) => {
                                 return (
-                                    <li key={index} data-aos="fade-up" data-aos-delay={`${index}00`}>
+                                    <li
+                                        key={index}
+                                        data-aos="fade-up"
+                                        data-aos-delay={`${index}00`}
+                                    >
                                         <div className={style.thumb}>
-                                            <img src={game.Image} alt="" />
+                                            <img
+                                                src={game.Image}
+                                                alt=""
+                                            />
                                             <div className={style.gameDetails}>
-                                                <span>Publisher : <span>{game.Publisher}</span></span>
-                                                <span>Year : <span>{game.Year}</span></span>
-                                                <span>Name : <span>{game.Label}</span></span>
+                                                <span>
+                                                    Publisher : <span>{game.Publisher}</span>
+                                                </span>
+                                                <span>
+                                                    Year : <span>{game.Year}</span>
+                                                </span>
+                                                <span>
+                                                    Name : <span>{game.Label}</span>
+                                                </span>
                                             </div>
                                         </div>
                                         <div className={style.followers}>
@@ -41,8 +52,7 @@ const TrendingGames = () => {
                                         </div>
                                     </li>
                                 )
-                            })
-                        }
+                            })}
                     </ul>
                 </div>
             </div>

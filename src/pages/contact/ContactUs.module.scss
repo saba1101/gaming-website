@@ -1,0 +1,24 @@
+.contactMap {
+    width: 100%;
+    margin-top: 160px;
+    .commonDetails {
+        @include centerEl;
+        text-align: center;
+        width: 100%;
+        h1,
+        p {
+            color: $Day00;
+        }
+        h1 {
+            font-size: 32px;
+            @include typingAnimation(2s);
+        }
+        p {
+            margin-top: 32px;
+            font-family: $fRegular;
+        }
+    }
+    .map {
+        margin-top: 62px;
+    }
+}
